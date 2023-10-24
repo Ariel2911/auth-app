@@ -1,10 +1,7 @@
-import express from "express";
+import { app } from "./app";
+import "./config/db";
+app.set("PORT", process.env.PORT);
 
-const app = express();
-app.get('/', (_req, res) => {
-    res.send('Funciona')
-})
-
-app.listen(3000, ()=> {
-    console.log('escuchando desde el puerto 3000')
-})
+app.listen(app.get("PORT"), () => {
+  console.log(`Server listen in port ${app.get("PORT")}`);
+});
