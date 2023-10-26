@@ -1,5 +1,5 @@
 import { Schema, model } from "mongoose";
-import { UserInterface } from "../interfaces/UserInterfaces";
+import { UserInterface }  from "../interfaces/UserInterfaces";
 import { boolean } from "joi";
 
 /* CREACION DE LOS CAMPOS DE LA TABLA USER */
@@ -19,7 +19,6 @@ const userSchema = new Schema<UserInterface>(
     },
     confirmation: {
       type: Boolean,
-      required: true,
     },
   },
   {
